@@ -1,6 +1,6 @@
 import "./globals.css";
+import Navbar from "@/components/NavBar";
 // import Footer from "@/components/Footer";
-// import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Dribble",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body>
-        {/*<Navbar />*/}
+        <Navbar />
         <main>
           {children}
         </main>
