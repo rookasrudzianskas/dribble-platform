@@ -5,7 +5,7 @@ import {NavLinks} from "@/constant";
 import {getCurrentUser} from "@/lib/session";
 
 const Navbar = async ({}) => {
-  // const session = await getCurrentUser()
+  const session = true
 
   return (
     <nav className='flexBetween navbar'>
@@ -27,19 +27,19 @@ const Navbar = async ({}) => {
         </ul>
       </div>
 
-      {/*<div className='flexCenter gap-4'>*/}
-      {/*  {session?.user ? (*/}
-      {/*    <>*/}
-      {/*      <ProfileMenu session={session}/>*/}
+      <div className='flexCenter gap-4'>
+        {/*{session?.user ? (*/}
+        {/*  <>*/}
+        {/*    <ProfileMenu session={session}/>*/}
 
-      {/*      <Link href="/create-project">*/}
-      {/*        <Button title='Share work'/>*/}
-      {/*      </Link>*/}
-      {/*    </>*/}
-      {/*  ) : (*/}
-      {/*    <AuthProviders/>*/}
-      {/*  )}*/}
-      {/*</div>*/}
+        {/*    <Link href="/create-project">*/}
+        {/*      <Button title='Share work'/>*/}
+        {/*    </Link>*/}
+        {/*  </>*/}
+        {/*) : (*/}
+        {/*  <AuthProviders/>*/}
+        {/*)}*/}
+      </div>
     </nav>
   );
 };
