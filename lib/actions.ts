@@ -1,5 +1,5 @@
 import { GraphQLClient } from "graphql-request";
-
+// @ts-ignore
 import { createProjectMutation, createUserMutation, deleteProjectMutation, updateProjectMutation, getProjectByIdQuery, getProjectsOfUserQuery, getUserQuery, projectsQuery } from "@/graphql";
 import { ProjectForm } from "@/common.types";
 
@@ -54,11 +54,11 @@ export const createNewProject = async (form: ProjectForm, creatorId: string, tok
     client.setHeader("Authorization", `Bearer ${token}`);
 
     const variables = {
-      input: { 
-        ...form, 
-        image: imageUrl.url, 
-        createdBy: { 
-          link: creatorId 
+      input: {
+        ...form,
+        image: imageUrl.url,
+        createdBy: {
+          link: creatorId
         }
       }
     };
@@ -115,7 +115,7 @@ export const createUser = (name: string, email: string, avatarUrl: string) => {
       avatarUrl: avatarUrl
     },
   };
-  
+
   return makeGraphQLRequest(createUserMutation, variables);
 };
 
