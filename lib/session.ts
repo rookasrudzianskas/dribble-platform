@@ -52,7 +52,7 @@ export const authOptions: NextAuthOptions = {
           },
         };
 
-        return session;
+        return newSession;
       } catch (error: any) {
         console.error("Error retrieving user data: ", error.message);
         return session;
@@ -79,5 +79,6 @@ export const authOptions: NextAuthOptions = {
 
 export async function getCurrentUser() {
   const session = await getServerSession(authOptions) as SessionInterface;
+
   return session;
 }

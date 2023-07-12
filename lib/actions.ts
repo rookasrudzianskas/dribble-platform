@@ -112,7 +112,7 @@ export const createUser = (name: string, email: string, avatarUrl: string) => {
     input: {
       name: name,
       email: email,
-      avatarUrl: avatarUrl,
+      avatarUrl: avatarUrl
     },
   };
 
