@@ -14,7 +14,6 @@ const ProjectActions = ({ projectId }: Props) => {
   const [isDeleting, setIsDeleting] = useState<boolean>(false)
   const router = useRouter()
 
-
   const handleDeleteProject = async () => {
     setIsDeleting(true)
 
