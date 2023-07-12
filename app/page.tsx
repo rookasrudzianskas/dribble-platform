@@ -27,7 +27,7 @@ type ProjectSearch = {
 
 export const dynamic = 'force-dynamic';
 // @ts-ignore
-export const dynamicParams = true;
+// export const dynamicParams = true;
 export const revalidate = 0;
 
 const Home = async ({ searchParams: { category, endcursor } }: Props) => {
