@@ -58,7 +58,7 @@ export const createNewProject = async (form: ProjectForm, creatorId: string, tok
         ...form,
         image: imageUrl.url,
         createdBy: {
-          link: creatorId
+          link: creatorId,
         }
       }
     };

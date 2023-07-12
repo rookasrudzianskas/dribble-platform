@@ -1,4 +1,5 @@
 "use client"
+
 import Image from 'next/image';
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { useRouter } from 'next/navigation';
@@ -27,7 +28,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
     liveSiteUrl: project?.liveSiteUrl || "",
     githubUrl: project?.githubUrl || "",
     category: project?.category || ""
-  });
+  })
 
   const handleStateChange = (fieldName: keyof FormState, value: string) => {
     setForm((prevForm) => ({ ...prevForm, [fieldName]: value }));
@@ -83,6 +84,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
       setSubmitting(false)
     }
   }
+
 
   return (
     <form
